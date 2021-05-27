@@ -22,6 +22,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get('/', function(req, resp){
+   resp.send("Deployment  is Successful");
+})
+
 //signin
 app.post('/signin', function (req, res) {
   loginHandler(req, res, database, bcrypt);
