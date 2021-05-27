@@ -7,12 +7,12 @@ import knex from 'knex';
 import registerHandler from './serverHandlers/registerHandler.js';
 import loginHandler from './serverHandlers/loginHandler.js';
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; 
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; 
 const database = knex({
   client: 'pg',
   connection: {
     connectionString: process.env.DATABASE_URL,
-    ssl:true
+    ssl:false
   }
 });
 

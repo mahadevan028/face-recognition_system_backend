@@ -27,7 +27,7 @@ function registerHandler(req, resp, bcrypt, database, uuidv4) {
           }).then(function (data) {
             resp.json(data[0]);
           }).catch(function (err) {
-            resp.status(400).json("Unable to register: " + err.detail);
+            resp.status(400).json("Unable to register: " + err);
           })
       })
       .then(trx.commit)
