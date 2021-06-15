@@ -38,7 +38,7 @@ app.post('/register', function (req, resp) {
 
 
 //listening to port
-app.listen(process.env.PORT || '3001', function () {
+app.listen(process.env.PORT || '3002', function () {
   console.log("connection is online");
 });
 
